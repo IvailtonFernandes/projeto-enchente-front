@@ -1,0 +1,89 @@
+.sectionAbrigo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 5rem;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #000000;
+      margin-bottom: 20px;
+
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: #000000
+    }
+
+    
+}
+
+.containerCards {
+  padding: 3rem 6rem;
+  background-color: #f3f4f6;
+  min-height: 50vh;
+}
+
+.gridAbrigos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #0072dd;
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    h3 { font-size: 1.25rem; font-weight: 700; color: #1f2937; }
+    
+    span {
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    .disponivel { background: #dcfce7; color: #166534; }
+    .lotado { background: #fee2e2; color: #991b1b; }
+  }
+
+  .barraProgresso {
+    margin: 1.5rem 0;
+    .labelProgresso {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      margin-bottom: 5px;
+    }
+    .barraPai {
+      width: 100%;
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      .barraFilha { height: 100%; transition: width 0.5s ease-in-out; }
+    }
+  }
+
+  .vagasTexto { font-size: 0.9rem; color: #4b5563; }
+}
+
+.statusMsg { text-align: center; font-size: 1.2rem; color: #666; margin-top: 2rem; }
+
+@media (max-width: 768px) {
+  .containerCards { padding: 2rem 1rem; }
+}

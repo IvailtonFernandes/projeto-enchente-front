@@ -1,0 +1,111 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    border-bottom: 2px solid #000000;
+    position: relative; 
+    background-color: #fff;
+
+    .BoxLogo {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        z-index: 10;
+
+        img {
+            width: 5rem;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+
+   
+    .menuIcon {
+        display: none; 
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 10;
+
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            transition: 0.3s;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            text-decoration: none;
+            color: #000;
+
+            &:nth-child(2) {
+                background-color: #0072dd;
+                color: #fff;
+                padding: 0.6rem 1.3rem;
+                border-radius: 8px;
+                font-weight: 600;
+            }
+               &:nth-child(3) {
+                  background-color: #fff;
+                border: 2px solid #0072dd;
+                color: #0072dd;
+                padding: 0.6rem 1.3rem;
+                border-radius: 8px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 1.5rem; 
+
+        .menuIcon {
+            display: flex; 
+        }
+
+        nav {
+            display: none; 
+            flex-direction: column;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 2rem;
+            border-bottom: 2px solid #000;
+            gap: 1.5rem;
+            z-index: 5;
+
+            &.navActive {
+                display: flex; 
+            }
+
+            a:nth-child(2) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    
+    .bar1 { transform: rotate(-45deg) translate(-5px, 6px); }
+    .bar2 { opacity: 0; }
+    .bar3 { transform: rotate(45deg) translate(-5px, -6px); }
+}

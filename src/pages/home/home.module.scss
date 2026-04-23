@@ -1,0 +1,180 @@
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+    gap: 3rem;
+
+    .conteudo {
+        max-width: 480px;
+
+        img {
+            width: 75%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin: 1.5rem  0;
+            color: #000;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 2rem;
+
+            .btnUm {
+                padding: 12px 24px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 1rem;
+                background-color: #0072dd;
+                color: #fff;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #58acfc;
+                }
+            }
+
+            .btnDois {
+                padding: 12px 24px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 1rem;
+                border: 2px solid #0072dd;
+                color: #0072dd;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: rgba(0, 114, 221, 0.1);
+                }
+            }
+        }
+    }
+
+    .enchenteImgBox {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px; 
+        }
+    }
+}
+
+.sectionMissao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 6rem;
+    background-color: #466d91;
+    align-items: center;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: #FFFFFF;
+    }
+
+    .boxCards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+
+        article {
+            width: 25rem;
+            min-height: 320px; 
+            padding: 40px;
+            border: solid 1px rgba(255, 255, 255, 0.4);
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: translateY(-5px); 
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+            svg {
+                margin-bottom: 20px; 
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #FFFFFF;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            p {
+                font-size: 1rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .section {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+
+        .conteudo {
+            max-width: 100%;
+            h1 { font-size: 2rem; }
+            .buttons { flex-direction: column; }
+        }
+
+        .enchenteImgBox { display: none; }
+    }
+
+    .sectionMissao {
+        padding: 3rem 1.5rem;
+        align-items: center;
+        
+        h2 { font-size: 2.2rem; text-align: center; }
+        p { text-align: center; }
+
+        .boxCards {
+            flex-direction: column;
+            article {
+                width: 100%;
+                min-height: auto;
+                padding: 30px 20px;
+            }
+        }
+    }
+}
