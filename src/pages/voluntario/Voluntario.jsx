@@ -3,7 +3,7 @@ import s from './voluntario.module.scss';
 
 const Voluntario = () => {
   
-  const API_URL = 'http://localhost:3000'; 
+  const API_URL = 'https://projeto-enchente-back.onrender.com'; 
 
   const [formData, setFormData] = useState({
     nome: '',

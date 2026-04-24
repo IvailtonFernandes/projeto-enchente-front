@@ -3,7 +3,7 @@ import s from './abrigo.module.scss';
 
 const Abrigo = () => {
   
-  const API_URL = 'http://localhost:3000'; 
+  const API_URL = 'https://projeto-enchente-back.onrender.com'; 
 
   const [abrigos, setAbrigos] = useState([]);
   const [loading, setLoading] = useState(true);
