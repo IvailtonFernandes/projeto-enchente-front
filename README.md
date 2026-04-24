@@ -1,16 +1,22 @@
-# React + Vite
+# 🌊 Projeto SOS Enchentes - Gestão de Abrigos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 1 - Apresentação da Ideia
+Este é o meu projeto final. A ideia surgiu a partir do desafio sobre enchentes no Brasil. Pensando nesse cenário, decidi focar no problema da **falta de informações centralizadas sobre abrigos**, que muitas vezes dificulta o direcionamento correto das famílias desabrigadas para locais com vagas disponíveis.
 
-Currently, two official plugins are available:
+### 2 - Problema Escolhido
+Decidi resolver a dificuldade de comunicação e monitoramento da lotação dos abrigos em tempo real. Em situações de desastre, a falta de dados atualizados faz com que alguns abrigos fiquem superlotados enquanto outros permanecem vazios, gerando ineficiência no acolhimento das vítimas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 3 - Solução Proposta
+A ideia do sistema é uma plataforma de gestão de abrigos onde voluntários podem cadastrar novos pontos de acolhimento e a população pode consultar a lista de locais disponíveis. O sistema exibe de forma visual a barra de ocupação de cada abrigo, permitindo saber instantaneamente quais locais ainda podem receber pessoas.
 
-## React Compiler
+### 4 - Estrutura do Sistema
+O projeto foi dividido em três camadas:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Front-end:** Desenvolvido com **React.js** e **Vite**, utilizando **Sass (SCSS)** para uma interface moderna e responsiva. Ele é responsável por exibir os dados e permitir que o usuário interaja com o sistema.
+* **Back-end:** Desenvolvido em **Node.js** com o framework **Express**. Ele gere as rotas da API, faz a ponte entre o usuário e o banco de dados e garante que as informações sejam processadas corretamente.
+* **Banco de Dados:** Foi utilizado o **PostgreSQL**, um banco de dados relacional robusto hospedado na nuvem (Render). Ele armazena de forma permanente todos os dados dos abrigos, como nome, endereço, capacidade e ocupação atual.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Link do Projeto Online:** [https://projeto-enchente-front.onrender.com]  
+**Desenvolvido por:** Ivailton Fernandes
